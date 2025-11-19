@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PCP — 50 MCQ Live Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Start Panel -->
+    <div id="startPanel" class="card center">
+      <h1>PCP Quick Test — 50 MCQs</h1>
+      <p class="muted">Enter your name &amp; roll. Answer each question once. Final submit will send your score to instructor.</p>
+      <input id="nameInput" placeholder="Your full name" />
+      <input id="rollInput" placeholder="Roll number (optional)" />
+      <div class="row">
+        <button id="startBtn" class="btn primary">Start Test</button>
+      </div>
+      <small class="muted">Total Questions: 50 • Units I–VII</small>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quizPanel" class="hidden card">
+      <header class="top">
+        <div class="brand">PCP — 50 MCQ Live Test</div>
+        <div class="status">Name: <strong id="displayName"></strong> • Answered: <span id="answeredCount">0</span>/50</div>
+      </header>
+
+      <main id="questionsArea"></main>
+
+      <footer class="bar">
+        <div class="left muted">Tip: Click an option once — it locks.</div>
+        <div class="right">
+          <button id="resetBtn" class="btn ghost">Reset Answers</button>
+          <button id="submitBtn" class="btn primary" disabled>Final Submit</button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Result Modal -->
+    <div id="resultModal" class="modal hidden">
+      <div class="modalCard">
+        <h2>Result</h2>
+        <p id="resultMsg"></p>
+        <div class="bigScore" id="resultScore">0 / 50</div>
+        <div class="row">
+          <button id="closeResultBtn" class="btn primary">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">Prepared from PCP Units I–VII • Good luck! 🚀</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
